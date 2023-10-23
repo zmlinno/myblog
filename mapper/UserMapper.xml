@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--<mapper namespace="com.example.demo.mapper.UserMapper">-->
+<mapper namespace="com.example.demo.mapper.UserMapper">
+    <insert id="reg">
+        insert into userinfo(username,password) values(#{username},#{password})
+    </insert>
+
+    <select id= "getUserByName" resultType = "com.example.demo.entity.Userinfo">
+            select * from userinfo where username=#{username}
+--             这样的话mapper就写完了
+
+    </select>
+
+    <select id= "getUserById" resultType = "com.example.demo.entity.Userinfo">
+        select * from userinfo where id=#{id}
+--             这样的话mapper就写完了
+
+    </select>
+<!--    这是第二节课补充的代码-->
+
+
+
+
+
+</mapper>
